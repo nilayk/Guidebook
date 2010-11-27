@@ -2,4 +2,16 @@
 <resources>
     <string name="hello">Hello World!</string>
     <string name="app_name">Guidebook</string>
+    
+    <string name="building_list_text_hint">Type to search location</string>
+    <string name="guidebook_logo_text">Guidebook</string>
+    
+    <string-array name="locations_array">
+        <item>LA Live</item>
+        <item>Regal Cinemas</item>
+        <item>Universal Studios</item>
+        <item>Santa Monica Beach</item>
+        <item>Long Beach</item>
+        <item>Griffith Park</item>
+    </string-array>
 </resources>

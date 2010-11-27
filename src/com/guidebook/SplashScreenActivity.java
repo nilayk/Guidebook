@@ -26,7 +26,8 @@ public class SplashScreenActivity extends Activity {
 					finish();
 					Intent i = new Intent();
 					i.setClassName("com.guidebook",
-							"com.guidebook.Guidebook");
+							//"com.guidebook.Guidebook");
+							"com.guidebook.location.LocationActivity");
 					startActivity(i);
 				}
 			}

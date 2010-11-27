@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="#d6d6d6" >
+  
+  <ImageView
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/logo_image"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:adjustViewBounds="true"
+  	android:maxHeight="150sp"
+  	android:src="@drawable/logo_image" />
+  
+  <!-- TextView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/textview"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	android:textSize="48sp"
+	android:paddingTop="50px"
+	android:paddingBottom="30px"
+	android:textStyle="bold"
+	android:text="@string/guidebook_logo_text" /-->
+  
+  <EditText 
+  	android:id="@+android:id/search_box"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:hint="@string/building_list_text_hint"
+	android:inputType="text"
+	android:maxLines="1" />
+   
+   <ListView 
+   	android:id="@android:id/list"
+	android:layout_width="fill_parent"
+	android:layout_height="0dip"
+	android:layout_weight="1" />
+  	
+</LinearLayout>
