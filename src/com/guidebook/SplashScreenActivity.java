@@ -16,7 +16,7 @@ public class SplashScreenActivity extends Activity {
 			public void run() {
 				try {
 					int waited = 0;
-					while (waited < 5000) {
+					while (waited < 50) {
 						sleep(100);
 						waited += 100;
 					}
@@ -28,6 +28,7 @@ public class SplashScreenActivity extends Activity {
 					i.setClassName("com.guidebook",
 							//"com.guidebook.Guidebook");
 							"com.guidebook.location.LocationActivity");
+							//"com.guidebook.locationpack.LocationPackActivity");
 					startActivity(i);
 				}
 			}

@@ -11,14 +11,21 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		
-		<activity android:name=".Guidebook" android:theme="@android:style/Theme.NoTitleBar" />
-		<activity android:name=".location.LocationActivity" android:theme="@android:style/Theme.NoTitleBar" />
-		<activity android:name=".location.LocationInfoTabActivity" />
-		<activity android:name=".location.LocationReviewTabActivity" />
-		<activity android:name=".location.LocationVoiceTabActivity" />
 
+		<activity android:name=".Guidebook" android:theme="@android:style/Theme.NoTitleBar"></activity>
+
+		<activity android:name=".location.LocationActivity"
+			android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name=".location.LocationInfoListActivity"></activity>
+		<activity android:name=".location.LocationReviewListActivity"></activity>
+		<activity android:name=".location.LocationVoiceListActivity"></activity>
+
+		<activity android:name=".locationpack.LocationPackActivity"
+			android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name=".locationpack.LocationPackLocationListActivity"></activity>
+		<activity android:name=".locationpack.LocationPackGuidedTourListActivity"></activity>
+		
 	</application>
-	<uses-sdk android:minSdkVersion="8" />
+	<uses-sdk android:minSdkVersion="8"></uses-sdk>
 
 </manifest> 

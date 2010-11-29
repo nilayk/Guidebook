@@ -20,7 +20,7 @@ public class LocationActivity extends TabActivity {
 		TabHost.TabSpec spec;
 		Intent intent;
 
-		intent = new Intent().setClass(this, LocationInfoTabActivity.class);
+		intent = new Intent().setClass(this, LocationInfoListActivity.class);
 		spec = tabHost
 				.newTabSpec("info")
 				.setIndicator("Info",
@@ -28,7 +28,7 @@ public class LocationActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 		
-		intent = new Intent().setClass(this, LocationInfoTabActivity.class);
+		intent = new Intent().setClass(this, LocationReviewListActivity.class);
 		spec = tabHost
 				.newTabSpec("reviews")
 				.setIndicator("Reviews",
@@ -36,7 +36,7 @@ public class LocationActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 		
-		intent = new Intent().setClass(this, LocationInfoTabActivity.class);
+		intent = new Intent().setClass(this, LocationVoiceListActivity.class);
 		spec = tabHost
 				.newTabSpec("voice")
 				.setIndicator("Voice Notes",
@@ -44,7 +44,7 @@ public class LocationActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 		
-		tabHost.setCurrentTab(1);
+		tabHost.setCurrentTab(0);
 	}
 
 }
