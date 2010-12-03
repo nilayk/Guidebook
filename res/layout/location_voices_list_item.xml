@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:layout_width="wrap_content"
+	android:orientation="vertical" 
+	android:paddingTop="8sp"
+	android:paddingBottom="8sp" 
+	android:paddingLeft="5sp"
+	android:background="@drawable/list_item_background">
+	
+	<TextView
+		android:id="@+id/LocationVoiceRowID"
+		android:layout_width="0sp"
+		android:layout_height="0sp"
+		android:visibility="invisible">
+	</TextView>
+	<TextView 
+		android:id="@+id/LocationVoiceTitle"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="15sp"
+		android:text="Voice Title">
+	</TextView>
+	<TextView
+		android:id="@+id/LocationVoiceUser"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="10sp"
+		android:text="username">
+	</TextView>
+</LinearLayout>

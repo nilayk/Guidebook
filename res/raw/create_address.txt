@@ -1,0 +1,4 @@
+1,'USC, Los Angeles CA'
+2,'USC, Los Angeles CA'
+3,'USC, Los Angeles CA'
+4,'USC, Los Angeles CA'

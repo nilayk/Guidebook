@@ -5,17 +5,17 @@
 	<ImageView android:id="@+id/icon" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:layout_alignParentTop="true"
 		android:layout_marginRight="6dip" android:maxHeight="80dip"
-		android:src="@drawable/icon" />
+		android:src="@drawable/icon_old" />
 
-	<TextView android:id="@+id/firstLine" android:layout_width="fill_parent"
+	<TextView android:id="@+id/PackName" android:layout_width="fill_parent"
 		android:layout_height="wrap_content" android:layout_toRightOf="@id/icon"
 		android:layout_alignParentRight="true" android:layout_alignParentTop="true"
 		android:layout_alignWithParentIfMissing="true" android:gravity="center_vertical"
 		android:text="Guidebook" />
 		
-	<TextView android:id="@+id/secondLine" android:layout_width="fill_parent"
+	<TextView android:id="@+id/PackAddress" android:layout_width="fill_parent"
 		android:layout_height="26dip" android:layout_toRightOf="@id/icon"
-		android:layout_below="@id/firstLine" android:layout_alignParentRight="true"
+		android:layout_below="@id/PackName" android:layout_alignParentRight="true"
 		android:singleLine="true"
 		android:text="Simple application that shows how to use RelativeLayout" />
 

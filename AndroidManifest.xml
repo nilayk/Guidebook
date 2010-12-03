@@ -12,7 +12,9 @@
 			</intent-filter>
 		</activity>
 
-		<activity android:name=".Guidebook" android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name=".GuidebookActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name=".GuidebookLocationsTabActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
+		<activity android:name=".GuidebookLocationPacksTabActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
 
 		<activity android:name=".location.LocationActivity"
 			android:theme="@android:style/Theme.NoTitleBar"></activity>
@@ -27,5 +29,6 @@
 		
 	</application>
 	<uses-sdk android:minSdkVersion="8"></uses-sdk>
+	<uses-permission android:name="android.permission.INTERNET" />
 
 </manifest> 

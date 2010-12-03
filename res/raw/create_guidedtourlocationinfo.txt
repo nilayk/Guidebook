@@ -1,0 +1,4 @@
+1,1,'','This is Tommy Trojan - The symbol of USC'
+1,2,'','Doheny Library - The Oldest Library of USC'
+1,3,'','Leavey Library - The Biggest USC Library'
+1,4,'','McDonalds Swimming Pool - 1984 Olympics held here'

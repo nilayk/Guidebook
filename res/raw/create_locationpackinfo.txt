@@ -1,0 +1,1 @@
+1,'USC','University','University of Southern California Est. 1880','University Park Campus','University of southern California','Los Angeles','CA','USA'

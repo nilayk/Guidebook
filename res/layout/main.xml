@@ -1,12 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="#e5e5e5">
+  
+  <ImageView
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/logo_image"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:adjustViewBounds="true"
+  	android:maxHeight="150sp"
+  	android:src="@drawable/logo_image" />
+  
+  <EditText 
+  	android:id="@+android:id/search_box"
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:hint="@string/building_list_text_hint"
+	android:inputType="text"
+	android:maxLines="1" />
+	
+  <TabHost 
+  	android:id="@android:id/tabhost"
+  	android:layout_width="fill_parent" 
+  	android:layout_height="fill_parent">
+  	
+  	<LinearLayout 
+  		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:padding="5dp">
+
+		<TabWidget
+			android:id="@android:id/tabs"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content">
+		</TabWidget>
+
+		<FrameLayout
+			android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent"
+			android:padding="5dp">
+		</FrameLayout>
+
+	</LinearLayout>
+
+  </TabHost>
+   
+   <ListView 
+   	android:id="@+id/ListView01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_weight="1" />
+  	
 </LinearLayout>

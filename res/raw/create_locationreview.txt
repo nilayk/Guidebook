@@ -1,0 +1,16 @@
+1,5,'Tommy Trojan-the symbol of USC was great',4,0
+1,2,'I love you Tommy Trojan',5,0
+1,4,'Wow!! Great to visit',4,0
+1,3,'Symbol of USC',5,0
+2,4,'Oldest library in USC',3,0
+2,1,'Estb. in 1932',5,0
+2,3,'Great Architecture',3,0
+2,5,'Just wow!!',4,0
+3,3,'Great Architecture',4,0
+3,1,'Biggest Library',5,0
+3,4,'24x7',3,0
+3,2,'near the intersection of Jefferson Boulevard and Figueroa Street',2,0
+4,3,'Great place to visit',4,0
+4,2,'17ft deepest pool',2,0
+4,5,'Diving area also',3,0
+4,2,'1984 Olympics held here',4,0
