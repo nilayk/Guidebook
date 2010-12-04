@@ -27,8 +27,16 @@
 		<activity android:name=".locationpack.LocationPackLocationListActivity"></activity>
 		<activity android:name=".locationpack.LocationPackGuidedTourListActivity"></activity>
 		
+		
+		<activity android:name=".map.LocationMapViewActivity"></activity>
+		
+		<uses-library android:name="com.google.android.maps" />
 	</application>
 	<uses-sdk android:minSdkVersion="8"></uses-sdk>
-	<uses-permission android:name="android.permission.INTERNET" />
+	
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest> 

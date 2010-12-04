@@ -1,9 +1,16 @@
 package com.guidebook;
 
+import com.guidebook.map.LocationMapViewActivity;
+import com.guidebook.map.MyLocationListener;
+
 import android.app.TabActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -11,7 +18,7 @@ import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 
 public class GuidebookActivity extends TabActivity {
-	
+
 	Button mapButton;
 
 	@Override
@@ -19,17 +26,19 @@ public class GuidebookActivity extends TabActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
+
 		mapButton = (Button) findViewById(R.id.buttonShowMap);
-		
+
 		mapButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
-				//Intent i = new Intent(this, )
-				
+
+				Intent i = new Intent(getApplicationContext(),
+						LocationMapViewActivity.class);
+				startActivity(i);
+
 			}
 		});
 
@@ -40,10 +49,8 @@ public class GuidebookActivity extends TabActivity {
 
 		intent = new Intent().setClass(this,
 				GuidebookLocationsTabActivity.class);
-		spec = tabHost
-				.newTabSpec("locations")
-				.setIndicator("",
-						res.getDrawable(R.drawable.ic_tab_locations))
+		spec = tabHost.newTabSpec("locations")
+				.setIndicator("", res.getDrawable(R.drawable.ic_tab_locations))
 				.setContent(intent);
 		tabHost.addTab(spec);
 
@@ -55,7 +62,7 @@ public class GuidebookActivity extends TabActivity {
 						res.getDrawable(R.drawable.ic_tab_locationpacks))
 				.setContent(intent);
 		tabHost.addTab(spec);
-		
+
 		for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
 			tabHost.getTabWidget().getChildAt(i).setBackgroundColor(0xFFb5b5b5); // unselected
 		}
@@ -78,5 +85,11 @@ public class GuidebookActivity extends TabActivity {
 		});
 
 		tabHost.setCurrentTab(0);
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
 	}
 }
