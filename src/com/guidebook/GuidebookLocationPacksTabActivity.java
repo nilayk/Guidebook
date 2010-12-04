@@ -2,9 +2,6 @@ package com.guidebook;
 
 import java.util.ArrayList;
 
-import com.guidebook.db.GuidebookDbAdapter;
-import com.guidebook.locationpack.LocationPackActivity;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -12,11 +9,14 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.guidebook.db.GuidebookDbAdapter;
+import com.guidebook.locationpack.LocationPackActivity;
 
 public class GuidebookLocationPacksTabActivity extends Activity {
 

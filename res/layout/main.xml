@@ -1,72 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent"
-  android:orientation="vertical"
-  android:background="#cccccc">
-  
-  <ImageView
-  	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/logo_image"
-  	android:layout_width="fill_parent"
-  	android:layout_height="wrap_content"
-  	android:adjustViewBounds="true"
-  	android:maxHeight="150sp"
-  	android:src="@drawable/logo_image" />
-  	
-  <RelativeLayout
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
-	android:background="#cccccc">
-  
-	  <EditText 
-	  	android:id="@+android:id/search_box"
-		android:layout_width="fill_parent" 
-		android:layout_height="wrap_content"
-		android:hint="@string/building_list_text_hint"
-		android:layout_toLeftOf="@+id/buttonShowMap"
-		android:inputType="text"
-		android:maxLines="1"/>
-		
-	  <Button
-		android:id="@id/buttonShowMap"
-		android:layout_marginLeft="5sp"
-		android:layout_marginRight="5sp"
-		android:layout_width="45sp"
-		android:layout_height="45sp"
-		android:layout_alignParentRight="true"
-		android:background="@drawable/marker" />
-  
-  </RelativeLayout>
-	
-  <TabHost 
-  	android:id="@android:id/tabhost"
-  	android:layout_width="fill_parent" 
-  	android:layout_height="fill_parent"
-  	android:fadingEdge="none">
-  	
-  	<LinearLayout 
-  		android:orientation="vertical"
-		android:layout_width="fill_parent" 
-		android:layout_height="fill_parent"
-		android:padding="5dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="#cccccc">
 
-		<TabWidget
-			android:id="@android:id/tabs"
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content">
-		</TabWidget>
+	<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/logo_image" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:adjustViewBounds="true"
+		android:maxHeight="150sp" android:src="@drawable/logo_image" />
 
-		<FrameLayout
-			android:id="@android:id/tabcontent"
-			android:layout_width="fill_parent" 
-			android:layout_height="fill_parent"
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="#cccccc">
+
+		<EditText android:id="@+android:id/search_box"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:hint="@string/building_list_text_hint"
+			android:layout_toLeftOf="@+id/buttonShowMap" android:inputType="text"
+			android:maxLines="1" />
+
+		<Button android:id="@id/buttonShowMap"
+			android:layout_marginLeft="5sp" android:layout_marginRight="5sp"
+			android:layout_width="45sp" android:layout_height="45sp"
+			android:layout_alignParentRight="true" android:background="@drawable/marker" />
+
+	</RelativeLayout>
+
+	<TabHost android:id="@android:id/tabhost" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:fadingEdge="none">
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
 			android:padding="5dp">
-		</FrameLayout>
 
-	</LinearLayout>
+			<TabWidget android:id="@android:id/tabs"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+			</TabWidget>
 
-  </TabHost>
-  	
+			<FrameLayout android:id="@android:id/tabcontent"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:padding="5dp">
+			</FrameLayout>
+
+		</LinearLayout>
+
+	</TabHost>
+
 </LinearLayout>

@@ -2,9 +2,6 @@ package com.guidebook.locationpack;
 
 import java.util.ArrayList;
 
-import com.guidebook.R;
-import com.guidebook.db.GuidebookDbAdapter;
-
 import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
@@ -15,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.guidebook.R;
+import com.guidebook.db.GuidebookDbAdapter;
 
 public class LocationPackGuidedTourListActivity extends Activity {
 

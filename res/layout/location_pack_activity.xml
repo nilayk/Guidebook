@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:background="#cccccc">
-	
+
 	<ImageView android:id="@+id/icon" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:layout_alignParentTop="true"
 		android:layout_marginRight="6dip" android:maxHeight="80dip"
@@ -14,7 +14,7 @@
 		android:layout_alignWithParentIfMissing="true" android:gravity="center_vertical"
 		android:text="Guidebook" android:textColor="@color/guidebook_blue_dark"
 		android:layout_marginTop="10sp" android:textStyle="bold" />
-		
+
 	<TextView android:id="@+id/PackAddress" android:layout_width="fill_parent"
 		android:layout_height="26dip" android:layout_toRightOf="@id/icon"
 		android:layout_below="@id/PackName" android:layout_alignParentRight="true"
@@ -40,15 +40,11 @@
 		</LinearLayout>
 
 	</TabHost>
-	
-	<Button
-		android:id="@id/downloadPackButton"
-		android:layout_marginTop="20sp"
-		android:layout_width="100sp"
-        android:layout_height="50sp"
-        android:textStyle="normal"
-        android:text="Downlaod"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true" />
-	
+
+	<Button android:id="@id/downloadPackButton"
+		android:layout_marginTop="20sp" android:layout_width="100sp"
+		android:layout_height="50sp" android:textStyle="normal" android:text="Downlaod"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true" />
+
 </RelativeLayout>

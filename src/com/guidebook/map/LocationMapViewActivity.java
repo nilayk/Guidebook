@@ -136,7 +136,7 @@ public class LocationMapViewActivity extends MapActivity {
 					MapController myMapController = mapView.getController();
 					myMapController.animateTo(myLocationPoint);
 					myMapController.setZoom(17);
-					
+
 					Log.i("LOCATION", "<lat, long> = <"
 							+ LocationMapViewActivity.latitude + ", "
 							+ LocationMapViewActivity.longitude + ">");

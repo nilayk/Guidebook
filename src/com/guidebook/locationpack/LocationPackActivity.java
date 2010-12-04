@@ -1,16 +1,16 @@
 package com.guidebook.locationpack;
 
-import com.guidebook.R;
-import com.guidebook.db.GuidebookDbAdapter;
-
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.TabHost;
-import android.widget.TextView;
 import android.widget.TabHost.OnTabChangeListener;
+import android.widget.TextView;
+
+import com.guidebook.R;
+import com.guidebook.db.GuidebookDbAdapter;
 
 public class LocationPackActivity extends TabActivity {
 

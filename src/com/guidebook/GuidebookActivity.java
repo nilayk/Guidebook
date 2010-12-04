@@ -1,21 +1,16 @@
 package com.guidebook;
 
-import com.guidebook.map.LocationMapViewActivity;
-import com.guidebook.map.MyLocationListener;
-
 import android.app.TabActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
+
+import com.guidebook.map.LocationMapViewActivity;
 
 public class GuidebookActivity extends TabActivity {
 
