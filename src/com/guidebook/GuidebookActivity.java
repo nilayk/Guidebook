@@ -4,18 +4,37 @@ import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
 
 public class GuidebookActivity extends TabActivity {
+	
+	Button mapButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		
+		mapButton = (Button) findViewById(R.id.buttonShowMap);
+		
+		mapButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+				//Intent i = new Intent(this, )
+				
+			}
+		});
 
 		Resources res = getResources();
-		TabHost tabHost = getTabHost();
+		final TabHost tabHost = getTabHost();
 		TabHost.TabSpec spec;
 		Intent intent;
 
@@ -36,6 +55,27 @@ public class GuidebookActivity extends TabActivity {
 						res.getDrawable(R.drawable.ic_tab_locationpacks))
 				.setContent(intent);
 		tabHost.addTab(spec);
+		
+		for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+			tabHost.getTabWidget().getChildAt(i).setBackgroundColor(0xFFb5b5b5); // unselected
+		}
+		tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab())
+				.setBackgroundColor(0xFFE5E5E5); // selected
+
+		tabHost.setOnTabChangedListener(new OnTabChangeListener() {
+
+			@Override
+			public void onTabChanged(String tabId) {
+				// TODO Auto-generated method stub
+				for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+					tabHost.getTabWidget().getChildAt(i)
+							.setBackgroundColor(0xFFB5B5B5); // unselected
+				}
+				tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab())
+						.setBackgroundColor(0xFFE5E5E5); // selected
+
+			}
+		});
 
 		tabHost.setCurrentTab(0);
 	}

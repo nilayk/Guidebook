@@ -1,16 +1,17 @@
 package com.guidebook.location;
 
-import com.guidebook.R;
-import com.guidebook.db.GuidebookDbAdapter;
-
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TabHost;
+import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.guidebook.R;
+import com.guidebook.db.GuidebookDbAdapter;
 
 public class LocationActivity extends TabActivity {
 
@@ -38,7 +39,7 @@ public class LocationActivity extends TabActivity {
 		}
 
 		Resources res = getResources();
-		TabHost tabHost = getTabHost();
+		final TabHost tabHost = getTabHost();
 		TabHost.TabSpec spec;
 		Intent intent;
 
@@ -69,6 +70,27 @@ public class LocationActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 
+		for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+			tabHost.getTabWidget().getChildAt(i).setBackgroundColor(0xFFb5b5b5); // unselected
+		}
+		tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab())
+				.setBackgroundColor(0xFFE5E5E5); // selected
+
+		tabHost.setOnTabChangedListener(new OnTabChangeListener() {
+
+			@Override
+			public void onTabChanged(String tabId) {
+				// TODO Auto-generated method stub
+				for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+					tabHost.getTabWidget().getChildAt(i)
+							.setBackgroundColor(0xFFB5B5B5); // unselected
+				}
+				tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab())
+						.setBackgroundColor(0xFFE5E5E5); // selected
+
+			}
+		});
+
 		tabHost.setCurrentTab(0);
 
 		Cursor lCursor = null;
@@ -96,6 +118,10 @@ public class LocationActivity extends TabActivity {
 		}
 		lCursor.close();
 		mDbAdapter.close();
+	}
+
+	public static void setTabColor(TabHost tabhost) {
+
 	}
 
 }

@@ -20,13 +20,15 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:textSize="15sp"
-		android:text="Voice Title">
+		android:text="Voice Title"
+		android:textColor="@color/guidebook_blue_dark">
 	</TextView>
 	<TextView
 		android:id="@+id/LocationVoiceUser"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:textSize="10sp"
-		android:text="username">
+		android:text="username"
+		android:textColor="@color/guidebook_blue_dark">
 	</TextView>
 </LinearLayout>

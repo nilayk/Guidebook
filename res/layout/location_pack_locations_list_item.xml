@@ -20,12 +20,14 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:textSize="18sp"
-		android:textStyle="bold">
+		android:textStyle="bold"
+		android:textColor="@color/guidebook_blue_dark">
 	</TextView>
 	<TextView
 		android:id="@+id/PackLocationNote"
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
-		android:textStyle="normal">
+		android:textStyle="normal"
+		android:textColor="@color/guidebook_blue_dark">
 	</TextView>
 </LinearLayout>

@@ -10,6 +10,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.TabHost.OnTabChangeListener;
 
 public class LocationPackActivity extends TabActivity {
 
@@ -37,7 +38,7 @@ public class LocationPackActivity extends TabActivity {
 		}
 
 		Resources res = getResources();
-		TabHost tabHost = getTabHost();
+		final TabHost tabHost = getTabHost();
 		TabHost.TabSpec spec;
 		Intent intent;
 
@@ -63,6 +64,27 @@ public class LocationPackActivity extends TabActivity {
 				.setContent(intent);
 		intent.putExtra("locationPackID", mLocationPackID);
 		tabHost.addTab(spec);
+
+		for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+			tabHost.getTabWidget().getChildAt(i).setBackgroundColor(0xFFb5b5b5); // unselected
+		}
+		tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab())
+				.setBackgroundColor(0xFFE5E5E5); // selected
+
+		tabHost.setOnTabChangedListener(new OnTabChangeListener() {
+
+			@Override
+			public void onTabChanged(String tabId) {
+				// TODO Auto-generated method stub
+				for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
+					tabHost.getTabWidget().getChildAt(i)
+							.setBackgroundColor(0xFFB5B5B5); // unselected
+				}
+				tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab())
+						.setBackgroundColor(0xFFE5E5E5); // selected
+
+			}
+		});
 
 		tabHost.setCurrentTab(0);
 

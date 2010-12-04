@@ -20,14 +20,16 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:textSize="15sp"
-		android:text="Review text">
+		android:text="Review text"
+		android:textColor="@color/guidebook_blue_dark">
 	</TextView>
 	<TextView
 		android:id="@+id/LocationReviewUser"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:textSize="10sp"
-		android:text="username">
+		android:text="username"
+		android:textColor="@color/guidebook_blue_dark">
 	</TextView>
 	<RatingBar
 		android:id="@+id/LocationReviewRating"

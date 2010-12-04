@@ -4,7 +4,7 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:orientation="vertical"
-  android:background="#e5e5e5">
+  android:background="#cccccc">
   
   <ImageView
   	xmlns:android="http://schemas.android.com/apk/res/android"
@@ -14,14 +14,31 @@
   	android:adjustViewBounds="true"
   	android:maxHeight="150sp"
   	android:src="@drawable/logo_image" />
-  
-  <EditText 
-  	android:id="@+android:id/search_box"
-	android:layout_width="fill_parent" 
+  	
+  <RelativeLayout
+	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
-	android:hint="@string/building_list_text_hint"
-	android:inputType="text"
-	android:maxLines="1" />
+	android:background="#cccccc">
+  
+	  <EditText 
+	  	android:id="@+android:id/search_box"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:hint="@string/building_list_text_hint"
+		android:layout_toLeftOf="@+id/buttonShowMap"
+		android:inputType="text"
+		android:maxLines="1"/>
+		
+	  <Button
+		android:id="@id/buttonShowMap"
+		android:layout_marginLeft="5sp"
+		android:layout_marginRight="5sp"
+		android:layout_width="45sp"
+		android:layout_height="45sp"
+		android:layout_alignParentRight="true"
+		android:background="@drawable/marker" />
+  
+  </RelativeLayout>
 	
   <TabHost 
   	android:id="@android:id/tabhost"
